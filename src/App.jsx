@@ -27,6 +27,7 @@ function App() {
       localStorage.clear();   
 
       try{
+        setLoading(true);
           const res = await fetch(url);
           const apiData = await res.json();
           localStorage.setItem(localKey, JSON.stringify(apiData));
@@ -36,12 +37,18 @@ function App() {
       catch(err){
           console.log(err.message);
       }
+
+      finally{
+        setLoading(false);
+      }
     }
     fetchAPIData();
   },[]);
 
   return (
     <>
+      <img className='body-background' src={data?.hdurl} alt={data?.title || 'bg-img' } />
+      <div className='body-gradient'></div>
       {data ? (<Main data={data} />) : 
           <div className="loadingState">
             <i className="fa-solid fa-gear"></i>
