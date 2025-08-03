@@ -122,7 +122,6 @@ footer button:hover{
   display: flex;
   flex-direction: column;
   z-index: 10;
-  
 }
 
 .bgOverlay {
@@ -140,10 +139,12 @@ footer button:hover{
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-width: 500px;
   margin-left: auto;
   background: #030615;
+   scrollbar-color: rgb(10,10,10)  rgb(7, 7, 37);
+   scrollbar-width: thin;
 }
 
 .sidebarContents h2{
