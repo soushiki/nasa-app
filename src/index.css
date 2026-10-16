@@ -18,11 +18,9 @@
 }
 
 #root {
-
+  width: 100%;
   min-height: 100vh;
   display: flex;
-  
-
 }
 
 body {
@@ -56,6 +54,8 @@ body {
 .imgContainer {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-width: 0;
   height: 100vh;
 }
 
@@ -244,6 +244,22 @@ footer button:hover{
   .sidebarContents {
     margin: unset;
     width: 100%;
+  }
+}
+
+/* landscape phones: not enough height to share the screen, keep the overlay */
+@media (min-width: 640px) and (max-height: 500px) {
+  .sidebar {
+    position: fixed;
+    inset: 0;
+    min-width: unset;
+    max-height: unset;
+    box-shadow: none;
+  }
+
+  .sidebarContents {
+    margin-left: auto;
+    max-width: 60%;
   }
 }
 
