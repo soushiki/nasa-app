@@ -8,8 +8,8 @@ export default function Footer({showModal, data}) {
                 <h1>APOD Project</h1>
                 <h2>{data?.title}</h2>
             </div>
-            <button onClick={showModal}>
-                <i className="fa-solid fa-circle-info"></i>
+            <button className="infoButton" onClick={showModal}>
+                Info
             </button>
             <div className="bgGradient"></div>
         </footer>

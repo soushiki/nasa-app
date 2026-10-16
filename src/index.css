@@ -122,6 +122,21 @@ footer button i {
 footer button:hover{
   opacity: 0.7;
 }
+
+footer .infoButton {
+  align-self: center;
+  flex-shrink: 0;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+
+footer .infoButton:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.15);
+}
 .bgGradient{
   position: absolute;
   inset: 0;
